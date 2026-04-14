@@ -44,6 +44,7 @@ const useFCMToken = () => {
 
     // Step 4: Listen for foreground notifications
     const unsubscribe = onMessage(messaging, (payload) => {
+      
       console.log("Foreground message received:", payload);
       setNotification(payload.notification);
     });
